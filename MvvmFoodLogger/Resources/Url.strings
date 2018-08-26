@@ -1,0 +1,2 @@
+"googlePlacesApiPlaceUrl" = "https://maps.googleapis.com/maps/api/place/nearbysearch/json";
+"googlePlacesApiPlacePhotoUrl" = "https://maps.googleapis.com/maps/api/place/photo?";

@@ -1,0 +1,18 @@
+// ファイル名
+"keyFileName" = "key";
+"plistExtension" = "plist";
+"googleApiKey" = "googleApiKey";
+"googleApiKeyName" = "googleApiKey";
+
+// パラメータ名
+// Key名
+"apiKeyName" = "key";
+"locationKeyName" = "location";
+"typeKeyName" = "type";
+"radiusKeyName" = "radius";
+"photoreferenceKeyName" = "photoreference";
+"maxWidthKeyName" = "maxWidth";
+
+// Value名
+"hospitalTypeValueName" = "hospital";
+"restaurantTypeValueName" = "restaurant";

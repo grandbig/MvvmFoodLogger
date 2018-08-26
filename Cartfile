@@ -1,0 +1,5 @@
+github "ReactiveX/RxSwift" ~> 4.0
+github "Moya/Moya"
+github "mxcl/PromiseKit" ~> 6.0
+github "realm/realm-cocoa"
+github "Alamofire/AlamofireImage" ~> 3.3

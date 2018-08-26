@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0D16C64E7E44C56E12CF38 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00A5FFEB49EBBD1F2A41753 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework */; };
+		2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */; };
 		2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2D2132511100D20283 /* AppDelegate.swift */; };
 		2EF43C302132511200D20283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2F2132511200D20283 /* ViewController.swift */; };
 		2EF43C332132511200D20283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C312132511200D20283 /* Main.storyboard */; };
@@ -14,6 +16,30 @@
 		2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C362132511300D20283 /* LaunchScreen.storyboard */; };
 		2EF43C432132511400D20283 /* MvvmFoodLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C422132511400D20283 /* MvvmFoodLoggerTests.swift */; };
 		2EF43C4E2132511400D20283 /* MvvmFoodLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C4D2132511400D20283 /* MvvmFoodLoggerUITests.swift */; };
+		2EF43C5D213254CA00D20283 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5C213254C900D20283 /* RxSwift.framework */; };
+		2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5E213254ED00D20283 /* ReactiveMoya.framework */; };
+		2EF43C68213254EE00D20283 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5F213254ED00D20283 /* Result.framework */; };
+		2EF43C69213254EE00D20283 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C60213254ED00D20283 /* RxTest.framework */; };
+		2EF43C6A213254EE00D20283 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C61213254ED00D20283 /* ReactiveSwift.framework */; };
+		2EF43C6B213254EE00D20283 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C62213254EE00D20283 /* PromiseKit.framework */; };
+		2EF43C6C213254EE00D20283 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C63213254EE00D20283 /* RxCocoa.framework */; };
+		2EF43C6D213254EE00D20283 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C64213254EE00D20283 /* Moya.framework */; };
+		2EF43C6E213254EE00D20283 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C65213254EE00D20283 /* RxBlocking.framework */; };
+		2EF43C6F213254EE00D20283 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C66213254EE00D20283 /* RxMoya.framework */; };
+		2EF43C722132578B00D20283 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C702132578B00D20283 /* Realm.framework */; };
+		2EF43C732132578B00D20283 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C712132578B00D20283 /* RealmSwift.framework */; };
+		2EF43C7621325A9C00D20283 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C7521325A9C00D20283 /* AlamofireImage.framework */; };
+		2EF43C7821325AE700D20283 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C7721325AE700D20283 /* Alamofire.framework */; };
+		2EF43C7B21325B6400D20283 /* key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C7A21325B6400D20283 /* key.plist */; };
+		2EF43C7D21325BE700D20283 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C7C21325BE700D20283 /* R.generated.swift */; };
+		2EF43C8321325C9300D20283 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C8221325C9300D20283 /* Place.swift */; };
+		2EF43C8521325CA700D20283 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C8421325CA700D20283 /* Places.swift */; };
+		2EF43C8721325CE400D20283 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C8621325CE400D20283 /* PlacesViewModel.swift */; };
+		2EF43C8921325D2D00D20283 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C8821325D2D00D20283 /* Injectable.swift */; };
+		2EF43C8B2132657E00D20283 /* GooglePlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */; };
+		2EF43C8D213265D800D20283 /* Url.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C8C213265D800D20283 /* Url.strings */; };
+		2EF43C8F213265F300D20283 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C8E213265F300D20283 /* Common.strings */; };
+		67B5E4502AC696EC3F6C981A /* Pods_MvvmFoodLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EF5950DBB3DBC3B111C610 /* Pods_MvvmFoodLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BAA21FDCB61991EDD647D93 /* Pods-MvvmFoodLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		2EF43C2A2132511100D20283 /* MvvmFoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmFoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C2D2132511100D20283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF43C2F2132511200D20283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +74,37 @@
 		2EF43C492132511400D20283 /* MvvmFoodLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmFoodLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C4D2132511400D20283 /* MvvmFoodLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmFoodLoggerUITests.swift; sourceTree = "<group>"; };
 		2EF43C4F2132511400D20283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EF43C5C213254C900D20283 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2EF43C5E213254ED00D20283 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
+		2EF43C5F213254ED00D20283 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		2EF43C60213254ED00D20283 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		2EF43C61213254ED00D20283 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		2EF43C62213254EE00D20283 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		2EF43C63213254EE00D20283 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		2EF43C64213254EE00D20283 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		2EF43C65213254EE00D20283 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		2EF43C66213254EE00D20283 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		2EF43C702132578B00D20283 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		2EF43C712132578B00D20283 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		2EF43C7521325A9C00D20283 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		2EF43C7721325AE700D20283 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2EF43C7A21325B6400D20283 /* key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = key.plist; sourceTree = "<group>"; };
+		2EF43C7C21325BE700D20283 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		2EF43C8221325C9300D20283 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		2EF43C8421325CA700D20283 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		2EF43C8621325CE400D20283 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		2EF43C8821325D2D00D20283 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPI.swift; sourceTree = "<group>"; };
+		2EF43C8C213265D800D20283 /* Url.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Url.strings; sourceTree = "<group>"; };
+		2EF43C8E213265F300D20283 /* Common.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Common.strings; sourceTree = "<group>"; };
+		3B360E88B171E8EFFB3BDBC6 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61EF5950DBB3DBC3B111C610 /* Pods_MvvmFoodLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmFoodLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D8ECBC9163C8B9D066C539 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C505BBDD429EC04DC5B1667F /* Pods-MvvmFoodLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger.release.xcconfig"; sourceTree = "<group>"; };
+		CD9BDE3DAB9586B9AF736C95 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE373BC137FD0B02F4DBECD7 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D00A5FFEB49EBBD1F2A41753 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +112,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF43C7821325AE700D20283 /* Alamofire.framework in Frameworks */,
+				2EF43C7621325A9C00D20283 /* AlamofireImage.framework in Frameworks */,
+				2EF43C722132578B00D20283 /* Realm.framework in Frameworks */,
+				2EF43C732132578B00D20283 /* RealmSwift.framework in Frameworks */,
+				2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */,
+				2EF43C68213254EE00D20283 /* Result.framework in Frameworks */,
+				2EF43C69213254EE00D20283 /* RxTest.framework in Frameworks */,
+				2EF43C6A213254EE00D20283 /* ReactiveSwift.framework in Frameworks */,
+				2EF43C6B213254EE00D20283 /* PromiseKit.framework in Frameworks */,
+				2EF43C6C213254EE00D20283 /* RxCocoa.framework in Frameworks */,
+				2EF43C6D213254EE00D20283 /* Moya.framework in Frameworks */,
+				2EF43C6E213254EE00D20283 /* RxBlocking.framework in Frameworks */,
+				2EF43C6F213254EE00D20283 /* RxMoya.framework in Frameworks */,
+				2EF43C5D213254CA00D20283 /* RxSwift.framework in Frameworks */,
+				67B5E4502AC696EC3F6C981A /* Pods_MvvmFoodLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0D16C64E7E44C56E12CF38 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +156,8 @@
 				2EF43C412132511400D20283 /* MvvmFoodLoggerTests */,
 				2EF43C4C2132511400D20283 /* MvvmFoodLoggerUITests */,
 				2EF43C2B2132511100D20283 /* Products */,
+				2EF43C5B213254C900D20283 /* Frameworks */,
+				31950B872FDA3709E9BDA9EF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +174,11 @@
 		2EF43C2C2132511100D20283 /* MvvmFoodLogger */ = {
 			isa = PBXGroup;
 			children = (
+				2EF43C8121325C5200D20283 /* Protocol */,
+				2EF43C8021325C4900D20283 /* ViewModel */,
+				2EF43C7F21325C4300D20283 /* View */,
+				2EF43C7E21325C3600D20283 /* Model */,
+				2EF43C7921325B4700D20283 /* Resources */,
 				2EF43C2D2132511100D20283 /* AppDelegate.swift */,
 				2EF43C2F2132511200D20283 /* ViewController.swift */,
 				2EF43C312132511200D20283 /* Main.storyboard */,
@@ -125,6 +207,87 @@
 			path = MvvmFoodLoggerUITests;
 			sourceTree = "<group>";
 		};
+		2EF43C5B213254C900D20283 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EF43C7721325AE700D20283 /* Alamofire.framework */,
+				2EF43C7521325A9C00D20283 /* AlamofireImage.framework */,
+				2EF43C702132578B00D20283 /* Realm.framework */,
+				2EF43C712132578B00D20283 /* RealmSwift.framework */,
+				2EF43C64213254EE00D20283 /* Moya.framework */,
+				2EF43C62213254EE00D20283 /* PromiseKit.framework */,
+				2EF43C5E213254ED00D20283 /* ReactiveMoya.framework */,
+				2EF43C61213254ED00D20283 /* ReactiveSwift.framework */,
+				2EF43C5F213254ED00D20283 /* Result.framework */,
+				2EF43C65213254EE00D20283 /* RxBlocking.framework */,
+				2EF43C63213254EE00D20283 /* RxCocoa.framework */,
+				2EF43C66213254EE00D20283 /* RxMoya.framework */,
+				2EF43C60213254ED00D20283 /* RxTest.framework */,
+				2EF43C5C213254C900D20283 /* RxSwift.framework */,
+				61EF5950DBB3DBC3B111C610 /* Pods_MvvmFoodLogger.framework */,
+				5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */,
+				D00A5FFEB49EBBD1F2A41753 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EF43C7921325B4700D20283 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2EF43C7C21325BE700D20283 /* R.generated.swift */,
+				2EF43C7A21325B6400D20283 /* key.plist */,
+				2EF43C8C213265D800D20283 /* Url.strings */,
+				2EF43C8E213265F300D20283 /* Common.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2EF43C7E21325C3600D20283 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EF43C8221325C9300D20283 /* Place.swift */,
+				2EF43C8421325CA700D20283 /* Places.swift */,
+				2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EF43C7F21325C4300D20283 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EF43C8021325C4900D20283 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EF43C8621325CE400D20283 /* PlacesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EF43C8121325C5200D20283 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2EF43C8821325D2D00D20283 /* Injectable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		31950B872FDA3709E9BDA9EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BAA21FDCB61991EDD647D93 /* Pods-MvvmFoodLogger.debug.xcconfig */,
+				C505BBDD429EC04DC5B1667F /* Pods-MvvmFoodLogger.release.xcconfig */,
+				93D8ECBC9163C8B9D066C539 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.debug.xcconfig */,
+				CD9BDE3DAB9586B9AF736C95 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.release.xcconfig */,
+				CE373BC137FD0B02F4DBECD7 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.debug.xcconfig */,
+				3B360E88B171E8EFFB3BDBC6 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +295,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EF43C522132511400D20283 /* Build configuration list for PBXNativeTarget "MvvmFoodLogger" */;
 			buildPhases = (
+				3282EC7A6151644C9C9E42E1 /* [CP] Check Pods Manifest.lock */,
 				2EF43C262132511100D20283 /* Sources */,
 				2EF43C272132511100D20283 /* Frameworks */,
 				2EF43C282132511100D20283 /* Resources */,
+				22B13273CA4DC86F52A0DB16 /* [CP] Embed Pods Frameworks */,
+				48CF4B3451DF9C10F6EB4AC8 /* [CP] Copy Pods Resources */,
+				2EF43C742132591B00D20283 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,9 +316,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EF43C552132511400D20283 /* Build configuration list for PBXNativeTarget "MvvmFoodLoggerTests" */;
 			buildPhases = (
+				4F03CEA8644ACA1AAEBC375E /* [CP] Check Pods Manifest.lock */,
 				2EF43C3A2132511400D20283 /* Sources */,
 				2EF43C3B2132511400D20283 /* Frameworks */,
 				2EF43C3C2132511400D20283 /* Resources */,
+				0849A917A2972128689B7CFA /* [CP] Embed Pods Frameworks */,
+				86550AC330706F28F7C78654 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +337,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EF43C582132511400D20283 /* Build configuration list for PBXNativeTarget "MvvmFoodLoggerUITests" */;
 			buildPhases = (
+				F9DD5F1123351404EBAAE462 /* [CP] Check Pods Manifest.lock */,
 				2EF43C452132511400D20283 /* Sources */,
 				2EF43C462132511400D20283 /* Frameworks */,
 				2EF43C472132511400D20283 /* Resources */,
+				D82E78703E08837A69B02B83 /* [CP] Embed Pods Frameworks */,
+				C128B058702E9332EED8CE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,9 +402,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF43C8D213265D800D20283 /* Url.strings in Resources */,
+				2EF43C7B21325B6400D20283 /* key.plist in Resources */,
 				2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */,
 				2EF43C352132511300D20283 /* Assets.xcassets in Resources */,
 				2EF43C332132511200D20283 /* Main.storyboard in Resources */,
+				2EF43C8F213265F300D20283 /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +427,203 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0849A917A2972128689B7CFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22B13273CA4DC86F52A0DB16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EF43C742132591B00D20283 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
+		3282EC7A6151644C9C9E42E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MvvmFoodLogger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48CF4B3451DF9C10F6EB4AC8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F03CEA8644ACA1AAEBC375E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86550AC330706F28F7C78654 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C128B058702E9332EED8CE67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D82E78703E08837A69B02B83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DD5F1123351404EBAAE462 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EF43C262132511100D20283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF43C8721325CE400D20283 /* PlacesViewModel.swift in Sources */,
+				2EF43C8521325CA700D20283 /* Places.swift in Sources */,
 				2EF43C302132511200D20283 /* ViewController.swift in Sources */,
 				2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */,
+				2EF43C7D21325BE700D20283 /* R.generated.swift in Sources */,
+				2EF43C8321325C9300D20283 /* Place.swift in Sources */,
+				2EF43C8921325D2D00D20283 /* Injectable.swift in Sources */,
+				2EF43C8B2132657E00D20283 /* GooglePlacesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,10 +794,15 @@
 		};
 		2EF43C532132511400D20283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BAA21FDCB61991EDD647D93 /* Pods-MvvmFoodLogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MvvmFoodLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,10 +817,15 @@
 		};
 		2EF43C542132511400D20283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C505BBDD429EC04DC5B1667F /* Pods-MvvmFoodLogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MvvmFoodLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +840,7 @@
 		};
 		2EF43C562132511400D20283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93D8ECBC9163C8B9D066C539 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +862,7 @@
 		};
 		2EF43C572132511400D20283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD9BDE3DAB9586B9AF736C95 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +884,7 @@
 		};
 		2EF43C592132511400D20283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE373BC137FD0B02F4DBECD7 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +905,7 @@
 		};
 		2EF43C5A2132511400D20283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B360E88B171E8EFFB3BDBC6 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
