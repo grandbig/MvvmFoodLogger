@@ -9,28 +9,47 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import GoogleMaps
 
 final class PlacesViewModel: Injectable {
 
     struct Dependency {
         let apiClient: GooglePlacesAPIClient
-        let lat: Double
-        let lng: Double
+        let locationManager: LocationManager
+        let coordinate: CLLocationCoordinate2D
     }
     private let disposeBag = DisposeBag()
 
-    private let viewWillAppearStream = PublishSubject<Void>()
+    private let updateLocationStream = PublishSubject<Void>()
+    private let cameraStream = BehaviorSubject<GMSCameraPosition?>(value: nil)
     private let searchButtonDidTapStream = PublishSubject<Void>()
     private let placesStream = BehaviorSubject<[Place]>(value: [])
     private let navigateToPlaceStream = PublishSubject<Void>()
 
     init(with dependency: Dependency) {
         let apiClient = dependency.apiClient
-        let lat = dependency.lat
-        let lng = dependency.lng
+        let locationManager = dependency.locationManager
+        var coordinate = dependency.coordinate
+
+        updateLocationStream
+            .flatMapLatest { _ -> Observable<CLLocationCoordinate2D?> in
+                return locationManager.fetchCurrentLocation()
+            }.flatMapLatest({ (location) -> Observable<GMSCameraPosition?> in
+                guard let location = location else {
+                    return Observable.just(nil)
+                }
+                coordinate = location
+                let camera = GMSCameraPosition.camera(withLatitude: location.latitude,
+                                                      longitude: location.longitude,
+                                                      zoom: 16.0)
+                return Observable.just(camera)
+            })
+            .bind(to: cameraStream)
+            .disposed(by: disposeBag)
+
         searchButtonDidTapStream
             .flatMapLatest { _ -> Observable<[Place]> in
-                return apiClient.fetchRestaurants(lat: lat, lng: lng)
+                return apiClient.fetchRestaurants(coordinate: coordinate)
             }
             .bind(to: placesStream)
             .disposed(by: disposeBag)
@@ -39,8 +58,8 @@ final class PlacesViewModel: Injectable {
 
 // MARK: Input
 extension PlacesViewModel {
-    var viewWillAppear: AnyObserver<()> {
-        return viewWillAppearStream.asObserver()
+    var updateLocation: AnyObserver<()> {
+        return updateLocationStream.asObserver()
     }
 
     var searchButtonDidTap: AnyObserver<()> {
@@ -52,6 +71,10 @@ extension PlacesViewModel {
 extension PlacesViewModel {
     var places: Observable<[Place]> {
         return placesStream.asObservable()
+    }
+
+    var camera: Observable<GMSCameraPosition?> {
+        return cameraStream.asObservable()
     }
 
     var navigateToPlace: Observable<Void> {

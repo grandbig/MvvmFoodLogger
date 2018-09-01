@@ -26,7 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        let dependency = PlacesViewModel.Dependency.init(apiClient: GooglePlacesAPI(), lat: 0.0, lng: 0.0)
+        let coordinate = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+        let dependency = PlacesViewModel.Dependency.init(apiClient: GooglePlacesAPI(),
+                                                         locationManager: LocationManager(),
+                                                         coordinate: coordinate)
         let viewController = PlacesViewController.init(with: PlacesViewModel(with: dependency))
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.makeKeyAndVisible()
