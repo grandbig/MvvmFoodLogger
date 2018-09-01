@@ -14,7 +14,7 @@ import PromiseKit
 import GooglePlaces
 
 internal enum GooglePlacesAPITarget {
-    case restaurants(lat: Double, lng: Double)
+    case restaurants(coordinate: CLLocationCoordinate2D)
 }
 
 internal enum APIError: Error {
@@ -30,7 +30,7 @@ internal enum GooglePlacesError: Error {
 
 protocol GooglePlacesAPIClient {
 
-    func fetchRestaurants(lat: Double, lng: Double) -> Observable<[Place]>
+    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<[Place]>
     func fetchPhoto(placeId: String) -> Promise<UIImage?>
 }
 
@@ -94,10 +94,10 @@ extension GooglePlacesAPITarget: TargetType {
     // パラメータの設定
     var task: Task {
         switch self {
-        case let .restaurants(lat, lng):
+        case let .restaurants(coordinate):
             return .requestParameters(parameters: [
                 R.string.common.keyFileName(): apiKey,
-                R.string.common.locationKeyName(): "\(lat),\(lng)",
+                R.string.common.locationKeyName(): "\(coordinate.latitude),\(coordinate.longitude)",
                 R.string.common.radiusKeyName(): 1500,
                 R.string.common.typeKeyName(): R.string.common.restaurantTypeValueName()
                 ], encoding: URLEncoding.default)
@@ -127,10 +127,10 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
     /// 指定の緯度、経度から一定範囲内のレストランを検索する処理
     ///
     /// - Returns: レストランのプレイス情報
-    func fetchRestaurants(lat: Double, lng: Double) -> Observable<[Place]> {
+    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<[Place]> {
         
         return provider.rx
-            .request(.restaurants(lat: lat, lng: lng))
+            .request(.restaurants(coordinate: coordinate))
             .filterSuccessfulStatusCodes()
             .map(Places.self)
             .map({ places -> [Place] in

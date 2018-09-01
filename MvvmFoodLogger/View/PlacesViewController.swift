@@ -23,10 +23,7 @@ class PlacesViewController: UIViewController, Injectable {
     private let viewModel: PlacesViewModel
     private var dataSource = [Place]()
     private let disposeBag = DisposeBag()
-    private var locationManager: CLLocationManager?
-    private let zoomLevel: Float = 16.0
-    private var currentLocation: CLLocationCoordinate2D?
-    private var initView: Bool = false
+    private var initedView: Bool = false
     
     required init(with dependency: Dependency) {
         viewModel = dependency
@@ -47,13 +44,8 @@ class PlacesViewController: UIViewController, Injectable {
         mapView.settings.myLocationButton = true
         mapView.settings.compassButton = true
         mapView.delegate = self
-        
-        // 位置情報関連の初期化
-        locationManager = CLLocationManager()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.startUpdatingLocation()
-        locationManager?.delegate = self
+
+        bind()
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,9 +54,27 @@ class PlacesViewController: UIViewController, Injectable {
     }
     
     private func bind() {
+        Observable<Int>.interval(1.0, scheduler: MainScheduler.instance)
+            .flatMapLatest({ _ -> Observable<()> in
+                return Observable.just(())
+            })
+            .bind(to: viewModel.updateLocation)
+            .disposed(by: disposeBag)
+
         searchButton.rx.tap
             .bind(to: viewModel.searchButtonDidTap)
             .disposed(by: disposeBag)
+
+        viewModel.camera
+            .bind { [weak self] camera in
+                guard let strongSelf = self, let camera = camera else { return }
+                if !strongSelf.initedView {
+                    strongSelf.mapView.camera = camera
+                    strongSelf.initedView = true
+                }                
+            }
+            .disposed(by: disposeBag)
+
         viewModel.places
             .bind { [weak self] places in
                 guard let strongSelf = self else { return }
@@ -84,46 +94,4 @@ class PlacesViewController: UIViewController, Injectable {
 
 // MARK: - GMSMapViewDelegate
 extension PlacesViewController: GMSMapViewDelegate {
-}
-
-// MARK: - CLLocationManagerDelegate
-extension PlacesViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            break
-        case .restricted, .denied:
-            break
-        case .authorizedWhenInUse:
-            break
-        default:
-            break
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // 現在地の更新
-        currentLocation = locations.last?.coordinate
-        
-        if !initView {
-            // 初期描画時のマップ中心位置の移動
-            let camera = GMSCameraPosition.camera(withTarget: currentLocation!, zoom: zoomLevel)
-            mapView.camera = camera
-            initView = true
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        if !CLLocationManager.locationServicesEnabled() {
-            // 端末の位置情報がOFFになっている場合
-            // アラートはデフォルトで表示されるので内部で用意はしない
-            self.currentLocation = nil
-            return
-        }
-        if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse {
-            // アプリの位置情報許可をOFFにしている場合
-            return
-        }
-    }
 }
