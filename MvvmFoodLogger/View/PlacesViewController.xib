@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesViewController" customModule="MvvmFoodLogger" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="SF1-ng-Pod" id="8Ed-wy-cTV"/>
+                <outlet property="searchButton" destination="JGW-Yt-RK4" id="VCI-qI-J8L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SF1-ng-Pod" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-Yt-RK4">
+                    <rect key="frame" x="307" y="539" width="56" height="56"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Pfq-YF-9s9"/>
+                        <constraint firstAttribute="width" constant="56" id="fhK-Mc-4Bd"/>
+                    </constraints>
+                    <state key="normal" image="SearchIcon"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                            <size key="value" width="0.0" height="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SF1-ng-Pod" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6Md-6t-JVd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JGW-Yt-RK4" secondAttribute="trailing" constant="12" id="Cnp-QD-5cn"/>
+                <constraint firstItem="SF1-ng-Pod" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E3w-Ys-u0N"/>
+                <constraint firstItem="SF1-ng-Pod" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XNh-FQ-u03"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JGW-Yt-RK4" secondAttribute="bottom" constant="72" id="bO3-JL-nwO"/>
+                <constraint firstItem="SF1-ng-Pod" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="sa0-OD-Es2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SearchIcon" width="36" height="36"/>
+    </resources>
+</document>

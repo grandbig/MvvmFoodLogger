@@ -8,6 +8,8 @@
 
 import Foundation
 import Moya
+import RxMoya
+import RxSwift
 import PromiseKit
 import GooglePlaces
 
@@ -28,7 +30,7 @@ internal enum GooglePlacesError: Error {
 
 protocol GooglePlacesAPIClient {
 
-    func fetchRestaurants(lat: Double, lng: Double) -> Promise<[Place]>
+    func fetchRestaurants(lat: Double, lng: Double) -> Observable<[Place]>
     func fetchPhoto(placeId: String) -> Promise<UIImage?>
 }
 
@@ -112,6 +114,7 @@ extension GooglePlacesAPITarget: TargetType {
 }
 
 class GooglePlacesAPI: GooglePlacesAPIClient {
+    private let disposeBag = DisposeBag()
     private var provider: MoyaProvider<GooglePlacesAPITarget>!
     
     /// イニシャライザ
@@ -124,27 +127,16 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
     /// 指定の緯度、経度から一定範囲内のレストランを検索する処理
     ///
     /// - Returns: レストランのプレイス情報
-    func fetchRestaurants(lat: Double, lng: Double) -> Promise<[Place]> {
-        let (promise, resolver) = Promise<[Place]>.pending()
+    func fetchRestaurants(lat: Double, lng: Double) -> Observable<[Place]> {
         
-        provider.request(.restaurants(lat: lat, lng: lng)) { result in
-            switch result {
-            case .success(let response):
-                do {
-                    let decoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let places = try decoder.decode(Places.self, from: response.data)
-                    
-                    resolver.fulfill(places.results)
-                } catch {
-                    resolver.reject(APIError.decodeError)
-                }
-            case .failure(let error):
-                resolver.reject(APIError.apiError(description: error.localizedDescription))
-            }
-        }
-        
-        return promise
+        return provider.rx
+            .request(.restaurants(lat: lat, lng: lng))
+            .filterSuccessfulStatusCodes()
+            .map(Places.self)
+            .map({ places -> [Place] in
+                return places.results
+            })
+            .asObservable()
     }
     
     func fetchPhoto(placeId: String) -> Promise<UIImage?> {

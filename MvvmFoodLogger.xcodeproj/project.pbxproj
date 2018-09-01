@@ -11,7 +11,6 @@
 		2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */; };
 		2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2D2132511100D20283 /* AppDelegate.swift */; };
 		2EF43C302132511200D20283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2F2132511200D20283 /* ViewController.swift */; };
-		2EF43C332132511200D20283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C312132511200D20283 /* Main.storyboard */; };
 		2EF43C352132511300D20283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C342132511300D20283 /* Assets.xcassets */; };
 		2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C362132511300D20283 /* LaunchScreen.storyboard */; };
 		2EF43C432132511400D20283 /* MvvmFoodLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C422132511400D20283 /* MvvmFoodLoggerTests.swift */; };
@@ -19,12 +18,10 @@
 		2EF43C5D213254CA00D20283 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5C213254C900D20283 /* RxSwift.framework */; };
 		2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5E213254ED00D20283 /* ReactiveMoya.framework */; };
 		2EF43C68213254EE00D20283 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5F213254ED00D20283 /* Result.framework */; };
-		2EF43C69213254EE00D20283 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C60213254ED00D20283 /* RxTest.framework */; };
 		2EF43C6A213254EE00D20283 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C61213254ED00D20283 /* ReactiveSwift.framework */; };
 		2EF43C6B213254EE00D20283 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C62213254EE00D20283 /* PromiseKit.framework */; };
 		2EF43C6C213254EE00D20283 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C63213254EE00D20283 /* RxCocoa.framework */; };
 		2EF43C6D213254EE00D20283 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C64213254EE00D20283 /* Moya.framework */; };
-		2EF43C6E213254EE00D20283 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C65213254EE00D20283 /* RxBlocking.framework */; };
 		2EF43C6F213254EE00D20283 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C66213254EE00D20283 /* RxMoya.framework */; };
 		2EF43C722132578B00D20283 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C702132578B00D20283 /* Realm.framework */; };
 		2EF43C732132578B00D20283 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C712132578B00D20283 /* RealmSwift.framework */; };
@@ -39,6 +36,10 @@
 		2EF43C8B2132657E00D20283 /* GooglePlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */; };
 		2EF43C8D213265D800D20283 /* Url.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C8C213265D800D20283 /* Url.strings */; };
 		2EF43C8F213265F300D20283 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C8E213265F300D20283 /* Common.strings */; };
+		2EF43C95213A32EC00D20283 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C65213254EE00D20283 /* RxBlocking.framework */; };
+		2EF43C96213A32EC00D20283 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C60213254ED00D20283 /* RxTest.framework */; };
+		2EF43C9C213A3C5600D20283 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C9A213A3C5600D20283 /* PlacesViewController.swift */; };
+		2EF43C9D213A3C5600D20283 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C9B213A3C5600D20283 /* PlacesViewController.xib */; };
 		67B5E4502AC696EC3F6C981A /* Pods_MvvmFoodLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EF5950DBB3DBC3B111C610 /* Pods_MvvmFoodLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +65,6 @@
 		2EF43C2A2132511100D20283 /* MvvmFoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmFoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C2D2132511100D20283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF43C2F2132511200D20283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2EF43C322132511200D20283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EF43C342132511300D20283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EF43C372132511300D20283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EF43C392132511300D20283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +97,8 @@
 		2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPI.swift; sourceTree = "<group>"; };
 		2EF43C8C213265D800D20283 /* Url.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Url.strings; sourceTree = "<group>"; };
 		2EF43C8E213265F300D20283 /* Common.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Common.strings; sourceTree = "<group>"; };
+		2EF43C9A213A3C5600D20283 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		2EF43C9B213A3C5600D20283 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
 		3B360E88B171E8EFFB3BDBC6 /* Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests/Pods-MvvmFoodLogger-Tests-MvvmFoodLoggerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EF5950DBB3DBC3B111C610 /* Pods_MvvmFoodLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmFoodLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,12 +120,10 @@
 				2EF43C732132578B00D20283 /* RealmSwift.framework in Frameworks */,
 				2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */,
 				2EF43C68213254EE00D20283 /* Result.framework in Frameworks */,
-				2EF43C69213254EE00D20283 /* RxTest.framework in Frameworks */,
 				2EF43C6A213254EE00D20283 /* ReactiveSwift.framework in Frameworks */,
 				2EF43C6B213254EE00D20283 /* PromiseKit.framework in Frameworks */,
 				2EF43C6C213254EE00D20283 /* RxCocoa.framework in Frameworks */,
 				2EF43C6D213254EE00D20283 /* Moya.framework in Frameworks */,
-				2EF43C6E213254EE00D20283 /* RxBlocking.framework in Frameworks */,
 				2EF43C6F213254EE00D20283 /* RxMoya.framework in Frameworks */,
 				2EF43C5D213254CA00D20283 /* RxSwift.framework in Frameworks */,
 				67B5E4502AC696EC3F6C981A /* Pods_MvvmFoodLogger.framework in Frameworks */,
@@ -134,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF43C95213A32EC00D20283 /* RxBlocking.framework in Frameworks */,
+				2EF43C96213A32EC00D20283 /* RxTest.framework in Frameworks */,
 				2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +183,6 @@
 				2EF43C7921325B4700D20283 /* Resources */,
 				2EF43C2D2132511100D20283 /* AppDelegate.swift */,
 				2EF43C2F2132511200D20283 /* ViewController.swift */,
-				2EF43C312132511200D20283 /* Main.storyboard */,
 				2EF43C342132511300D20283 /* Assets.xcassets */,
 				2EF43C362132511300D20283 /* LaunchScreen.storyboard */,
 				2EF43C392132511300D20283 /* Info.plist */,
@@ -255,6 +256,8 @@
 		2EF43C7F21325C4300D20283 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2EF43C9A213A3C5600D20283 /* PlacesViewController.swift */,
+				2EF43C9B213A3C5600D20283 /* PlacesViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				22B13273CA4DC86F52A0DB16 /* [CP] Embed Pods Frameworks */,
 				48CF4B3451DF9C10F6EB4AC8 /* [CP] Copy Pods Resources */,
 				2EF43C742132591B00D20283 /* ShellScript */,
+				2EF43C94213844D500D20283 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -322,6 +326,7 @@
 				2EF43C3C2132511400D20283 /* Resources */,
 				0849A917A2972128689B7CFA /* [CP] Embed Pods Frameworks */,
 				86550AC330706F28F7C78654 /* [CP] Copy Pods Resources */,
+				2EF43C97213A330500D20283 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -402,11 +407,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF43C9D213A3C5600D20283 /* PlacesViewController.xib in Resources */,
 				2EF43C8D213265D800D20283 /* Url.strings in Resources */,
 				2EF43C7B21325B6400D20283 /* key.plist in Resources */,
 				2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */,
 				2EF43C352132511300D20283 /* Assets.xcassets in Resources */,
-				2EF43C332132511200D20283 /* Main.storyboard in Resources */,
 				2EF43C8F213265F300D20283 /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +481,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
+		2EF43C94213844D500D20283 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveMoya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxMoya.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		2EF43C97213A330500D20283 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		3282EC7A6151644C9C9E42E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -618,6 +677,7 @@
 			files = (
 				2EF43C8721325CE400D20283 /* PlacesViewModel.swift in Sources */,
 				2EF43C8521325CA700D20283 /* Places.swift in Sources */,
+				2EF43C9C213A3C5600D20283 /* PlacesViewController.swift in Sources */,
 				2EF43C302132511200D20283 /* ViewController.swift in Sources */,
 				2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */,
 				2EF43C7D21325BE700D20283 /* R.generated.swift in Sources */,
@@ -659,14 +719,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2EF43C312132511200D20283 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2EF43C322132511200D20283 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2EF43C362132511300D20283 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -846,6 +898,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MvvmFoodLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -868,6 +924,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MvvmFoodLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
