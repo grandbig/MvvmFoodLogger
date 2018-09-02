@@ -132,7 +132,16 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
         return provider.rx
             .request(.restaurants(coordinate: coordinate))
             .filterSuccessfulStatusCodes()
-            .map(Places.self)
+            .map({ response -> Places in
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                return try decoder.decode(Places.self, from: response.data)
+            })
+            .catchError({ error -> PrimitiveSequence<SingleTrait, Places> in
+                // Decodeエラーが発生した場合は空配列で返却する
+                let places = Places(results: [], status: "0", htmlAttributions: [])
+                return PrimitiveSequence.just(places)
+            })
             .map({ places -> [Place] in
                 return places.results
             })
