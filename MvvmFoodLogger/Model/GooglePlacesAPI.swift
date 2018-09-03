@@ -10,7 +10,6 @@ import Foundation
 import Moya
 import RxMoya
 import RxSwift
-import PromiseKit
 import GooglePlaces
 
 internal enum GooglePlacesAPITarget {
@@ -31,7 +30,7 @@ internal enum GooglePlacesError: Error {
 protocol GooglePlacesAPIClient {
 
     func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<[Place]>
-    func fetchPhoto(placeId: String) -> Promise<UIImage?>
+    func fetchPhoto(placeId: String) -> Observable<UIImage?>
 }
 
 extension GooglePlacesAPITarget: TargetType {
@@ -148,27 +147,27 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
             .asObservable()
     }
     
-    func fetchPhoto(placeId: String) -> Promise<UIImage?> {
-        let (promise, resolver) = Promise<UIImage?>.pending()
+    func fetchPhoto(placeId: String) -> Observable<UIImage?> {
         
-        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: placeId) { (photos, error) in
-            if let error = error {
-                resolver.reject(error)
-                return
-            }
-            guard let firstPhoto = photos?.results.first else {
-                resolver.reject(GooglePlacesError.notFoundError)
-                return
-            }
-            GMSPlacesClient.shared().loadPlacePhoto(firstPhoto, callback: { (image, error) in
+        return Observable.create({ (observer) -> Disposable in
+            GMSPlacesClient.shared().lookUpPhotos(forPlaceID: placeId, callback: { (photos, error) in
                 if let error = error {
-                    resolver.reject(error)
+                    observer.onError(error)
                     return
                 }
-                resolver.fulfill(image)
+                guard let firstPhoto = photos?.results.first else {
+                    observer.onError(GooglePlacesError.notFoundError)
+                    return
+                }
+                GMSPlacesClient.shared().loadPlacePhoto(firstPhoto, callback: { (image, error) in
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+                    observer.onNext(image)
+                })
             })
-        }
-        
-        return promise
+            return Disposables.create()
+        })
     }
 }
