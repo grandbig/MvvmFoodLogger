@@ -18,7 +18,6 @@
 		2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5E213254ED00D20283 /* ReactiveMoya.framework */; };
 		2EF43C68213254EE00D20283 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5F213254ED00D20283 /* Result.framework */; };
 		2EF43C6A213254EE00D20283 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C61213254ED00D20283 /* ReactiveSwift.framework */; };
-		2EF43C6B213254EE00D20283 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C62213254EE00D20283 /* PromiseKit.framework */; };
 		2EF43C6C213254EE00D20283 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C63213254EE00D20283 /* RxCocoa.framework */; };
 		2EF43C6D213254EE00D20283 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C64213254EE00D20283 /* Moya.framework */; };
 		2EF43C6F213254EE00D20283 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C66213254EE00D20283 /* RxMoya.framework */; };
@@ -121,7 +120,6 @@
 				2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */,
 				2EF43C68213254EE00D20283 /* Result.framework in Frameworks */,
 				2EF43C6A213254EE00D20283 /* ReactiveSwift.framework in Frameworks */,
-				2EF43C6B213254EE00D20283 /* PromiseKit.framework in Frameworks */,
 				2EF43C6C213254EE00D20283 /* RxCocoa.framework in Frameworks */,
 				2EF43C6D213254EE00D20283 /* Moya.framework in Frameworks */,
 				2EF43C6F213254EE00D20283 /* RxMoya.framework in Frameworks */,
@@ -497,7 +495,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 			);
@@ -511,7 +508,6 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveMoya.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxMoya.framework",
 			);
