@@ -85,9 +85,16 @@ class PlacesViewController: UIViewController, Injectable {
             .disposed(by: disposeBag)
     }
     
+    /// GoogleMapにマーカをプロットする
+    ///
+    /// - Parameter place: プレイス情報
     private func putMarker(place: Place) {
         let coordinate = CLLocationCoordinate2D(latitude: place.geometry.location.lat, longitude: place.geometry.location.lng)
-        let marker = GMSMarker(position: coordinate)
+        let marker = RestaurantMarker(position: coordinate)
+        marker.id = place.placeId
+        marker.name = place.name
+        marker.icon = UIImage(named: "Restaurant")
+        marker.appearAnimation = GMSMarkerAnimation.pop
         marker.map = mapView
     }
 }

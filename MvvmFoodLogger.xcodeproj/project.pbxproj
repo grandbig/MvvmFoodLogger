@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C0D16C64E7E44C56E12CF38 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00A5FFEB49EBBD1F2A41753 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerUITests.framework */; };
+		2E1650B5213ED9740069BE62 /* RestaurantMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1650B4213ED9740069BE62 /* RestaurantMarker.swift */; };
 		2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */; };
 		2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2D2132511100D20283 /* AppDelegate.swift */; };
 		2EF43C352132511300D20283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C342132511300D20283 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		0BAA21FDCB61991EDD647D93 /* Pods-MvvmFoodLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmFoodLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmFoodLogger/Pods-MvvmFoodLogger.debug.xcconfig"; sourceTree = "<group>"; };
+		2E1650B4213ED9740069BE62 /* RestaurantMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMarker.swift; sourceTree = "<group>"; };
 		2EF43C2A2132511100D20283 /* MvvmFoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmFoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C2D2132511100D20283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF43C342132511300D20283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				2EF43C8421325CA700D20283 /* Places.swift */,
 				2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */,
 				2EF43C9E213A68AB00D20283 /* LocationManager.swift */,
+				2E1650B4213ED9740069BE62 /* RestaurantMarker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				2EF43C9C213A3C5600D20283 /* PlacesViewController.swift in Sources */,
 				2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */,
 				2EF43C7D21325BE700D20283 /* R.generated.swift in Sources */,
+				2E1650B5213ED9740069BE62 /* RestaurantMarker.swift in Sources */,
 				2EF43C8321325C9300D20283 /* Place.swift in Sources */,
 				2EF43C8921325D2D00D20283 /* Injectable.swift in Sources */,
 				2EF43C8B2132657E00D20283 /* GooglePlacesAPI.swift in Sources */,
