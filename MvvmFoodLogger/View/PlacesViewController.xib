@@ -58,7 +58,7 @@
                 <constraint firstItem="SF1-ng-Pod" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E3w-Ys-u0N"/>
                 <constraint firstItem="SF1-ng-Pod" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XNh-FQ-u03"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JGW-Yt-RK4" secondAttribute="bottom" constant="72" id="bO3-JL-nwO"/>
-                <constraint firstItem="SF1-ng-Pod" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="sa0-OD-Es2"/>
+                <constraint firstItem="SF1-ng-Pod" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="sa0-OD-Es2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
