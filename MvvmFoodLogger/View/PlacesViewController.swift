@@ -113,7 +113,6 @@ class PlacesViewController: UIViewController, Injectable {
         marker.name = place.name
         marker.icon = UIImage(named: "Restaurant")
         marker.appearAnimation = GMSMarkerAnimation.pop
-        marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0.8)
         marker.map = mapView
         marker.tracksInfoWindowChanges = true
     }
