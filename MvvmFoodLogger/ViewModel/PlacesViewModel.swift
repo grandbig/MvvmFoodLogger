@@ -24,6 +24,8 @@ final class PlacesViewModel: Injectable {
     private let cameraStream = BehaviorSubject<GMSCameraPosition?>(value: nil)
     private let searchButtonDidTapStream = PublishSubject<Void>()
     private let placesStream = BehaviorSubject<[Place]>(value: [])
+    private let markerDidTapStream = PublishSubject<String>()
+    private let imageStream = BehaviorSubject<UIImage?>(value: nil)
     private let navigateToPlaceStream = PublishSubject<Void>()
 
     init(with dependency: Dependency) {
@@ -53,6 +55,13 @@ final class PlacesViewModel: Injectable {
             }
             .bind(to: placesStream)
             .disposed(by: disposeBag)
+
+        markerDidTapStream
+            .flatMapLatest { placeId -> Observable<UIImage?> in
+                return apiClient.fetchPhoto(placeId: placeId)
+            }
+            .bind(to: imageStream)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -65,6 +74,10 @@ extension PlacesViewModel {
     var searchButtonDidTap: AnyObserver<()> {
         return searchButtonDidTapStream.asObserver()
     }
+
+    var markerDidTap: AnyObserver<String> {
+        return markerDidTapStream.asObserver()
+    }
 }
 
 // MARK: Output
@@ -75,6 +88,10 @@ extension PlacesViewModel {
 
     var camera: Observable<GMSCameraPosition?> {
         return cameraStream.asObservable()
+    }
+
+    var image: Observable<UIImage?> {
+        return imageStream.asObservable()
     }
 
     var navigateToPlace: Observable<Void> {

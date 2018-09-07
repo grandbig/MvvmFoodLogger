@@ -24,6 +24,7 @@ class PlacesViewController: UIViewController, Injectable {
     private var dataSource = [Place]()
     private let disposeBag = DisposeBag()
     private var initedView: Bool = false
+    private var displayedInfoWindow: InfoContentView?
     
     required init(with dependency: Dependency) {
         viewModel = dependency
@@ -65,6 +66,17 @@ class PlacesViewController: UIViewController, Injectable {
             .bind(to: viewModel.searchButtonDidTap)
             .disposed(by: disposeBag)
 
+        rx.methodInvoked(#selector(mapView(_:markerInfoWindow:)))
+            .map { [weak self] _ in
+                guard let strongSelf = self else { return String() }
+                guard let marker = strongSelf.mapView.selectedMarker as? RestaurantMarker else {
+                    return String()
+                }
+                return marker.id
+            }
+            .bind(to: viewModel.markerDidTap)
+            .disposed(by: disposeBag)
+
         viewModel.camera
             .bind { [weak self] camera in
                 guard let strongSelf = self, let camera = camera else { return }
@@ -81,6 +93,12 @@ class PlacesViewController: UIViewController, Injectable {
                 places.forEach({ (place) in
                     strongSelf.putMarker(place: place)
                 })
+            }
+            .disposed(by: disposeBag)
+        viewModel.image
+            .bind { [weak self] image in
+                guard let strongSelf = self else { return }
+                strongSelf.displayedInfoWindow?.configureImage(image)
             }
             .disposed(by: disposeBag)
     }
@@ -101,4 +119,18 @@ class PlacesViewController: UIViewController, Injectable {
 
 // MARK: - GMSMapViewDelegate
 extension PlacesViewController: GMSMapViewDelegate {
+
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        return false
+    }
+
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        guard let restaurantMarker = marker as? RestaurantMarker else {
+            return nil
+        }
+        let infoWindow = InfoContentView(frame: CGRect(x: 0, y: 0, width: 250, height: 265))
+        infoWindow.setup(name: restaurantMarker.name)
+        displayedInfoWindow = infoWindow
+        return infoWindow
+    }
 }
