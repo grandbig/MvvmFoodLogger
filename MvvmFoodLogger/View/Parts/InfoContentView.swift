@@ -13,6 +13,7 @@ final class InfoContentView: UIView {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet weak var addFavoriteButton: UIButton!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +26,7 @@ final class InfoContentView: UIView {
     }
 
     internal func xibViewSet() {
-        if let view = Bundle.main.loadNibNamed("InfoContentView", owner: self, options: nil)?.first as? UIView {
+        if let view = R.nib.infoContentView().instantiate(withOwner: self, options: nil).first as? UIView {
             view.frame = self.bounds
             self.addSubview(view)
         }
