@@ -11,6 +11,8 @@
 		2E1650B5213ED9740069BE62 /* RestaurantMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1650B4213ED9740069BE62 /* RestaurantMarker.swift */; };
 		2E1650BD2142ACBC0069BE62 /* InfoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E1650BC2142ACBC0069BE62 /* InfoContentView.xib */; };
 		2E1650BF2142AD430069BE62 /* InfoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1650BE2142AD430069BE62 /* InfoContentView.swift */; };
+		2E1650C221456E800069BE62 /* ViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1650C121456E800069BE62 /* ViewController+Alert.swift */; };
+		2E1650C621456FA70069BE62 /* Error.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E1650C521456FA70069BE62 /* Error.strings */; };
 		2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */; };
 		2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2D2132511100D20283 /* AppDelegate.swift */; };
 		2EF43C352132511300D20283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C342132511300D20283 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		2E1650B4213ED9740069BE62 /* RestaurantMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMarker.swift; sourceTree = "<group>"; };
 		2E1650BC2142ACBC0069BE62 /* InfoContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoContentView.xib; sourceTree = "<group>"; };
 		2E1650BE2142AD430069BE62 /* InfoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoContentView.swift; sourceTree = "<group>"; };
+		2E1650C121456E800069BE62 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
+		2E1650C521456FA70069BE62 /* Error.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Error.strings; sourceTree = "<group>"; };
 		2EF43C2A2132511100D20283 /* MvvmFoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmFoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C2D2132511100D20283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF43C342132511300D20283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +168,14 @@
 			path = Parts;
 			sourceTree = "<group>";
 		};
+		2E1650C021456E610069BE62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E1650C121456E800069BE62 /* ViewController+Alert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2EF43C212132511100D20283 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +263,7 @@
 				2EF43C7A21325B6400D20283 /* key.plist */,
 				2EF43C8C213265D800D20283 /* Url.strings */,
 				2EF43C8E213265F300D20283 /* Common.strings */,
+				2E1650C521456FA70069BE62 /* Error.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -270,6 +283,7 @@
 		2EF43C7F21325C4300D20283 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E1650C021456E610069BE62 /* Extensions */,
 				2E1650BB2142ACAB0069BE62 /* Parts */,
 				2EF43C9A213A3C5600D20283 /* PlacesViewController.swift */,
 				2EF43C9B213A3C5600D20283 /* PlacesViewController.xib */,
@@ -429,6 +443,7 @@
 				2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */,
 				2EF43C352132511300D20283 /* Assets.xcassets in Resources */,
 				2EF43C8F213265F300D20283 /* Common.strings in Resources */,
+				2E1650C621456FA70069BE62 /* Error.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +707,7 @@
 				2EF43C8721325CE400D20283 /* PlacesViewModel.swift in Sources */,
 				2E1650BF2142AD430069BE62 /* InfoContentView.swift in Sources */,
 				2EF43C8521325CA700D20283 /* Places.swift in Sources */,
+				2E1650C221456E800069BE62 /* ViewController+Alert.swift in Sources */,
 				2EF43C9F213A68AB00D20283 /* LocationManager.swift in Sources */,
 				2EF43C9C213A3C5600D20283 /* PlacesViewController.swift in Sources */,
 				2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */,

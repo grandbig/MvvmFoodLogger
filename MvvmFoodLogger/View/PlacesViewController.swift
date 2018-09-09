@@ -101,9 +101,21 @@ class PlacesViewController: UIViewController, Injectable {
         viewModel.places
             .bind { [weak self] places in
                 guard let strongSelf = self else { return }
-                places.forEach({ (place) in
-                    strongSelf.putMarker(place: place)
-                })
+                let results = places.results
+                if results.count > 0 {
+                    results.forEach({ (place) in
+                        strongSelf.putMarker(place: place)
+                    })
+                    return
+                }
+                switch places.status {
+                case R.string.error.badRequestCode():
+                    // エラーでプレイス情報を取得できなかった場合
+                    strongSelf.showAlert(message: R.string.error.cannotFoundPlace(), completion: {})
+                default:
+                    break
+                }
+                
             }
             .disposed(by: disposeBag)
 

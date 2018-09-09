@@ -16,3 +16,7 @@
 // Value名
 "hospitalTypeValueName" = "hospital";
 "restaurantTypeValueName" = "restaurant";
+
+"ok" = "OK";
+"cancel" = "キャンセル";
+"confirm" = "確認";

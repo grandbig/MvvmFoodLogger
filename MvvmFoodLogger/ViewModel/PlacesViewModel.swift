@@ -29,7 +29,7 @@ final class PlacesViewModel: Injectable {
 
     // MARK: BehaviorSubjects
     private let cameraStream = BehaviorSubject<GMSCameraPosition?>(value: nil)
-    private let placesStream = BehaviorSubject<[Place]>(value: [])
+    private let placesStream = BehaviorSubject<Places>(value: Places(results: [], status: "0", htmlAttributions: []))
     private let imageStream = BehaviorSubject<UIImage?>(value: nil)
     private let resultOfAddFavoriteStream = BehaviorSubject<Bool>(value: true)
 
@@ -56,7 +56,7 @@ final class PlacesViewModel: Injectable {
             .disposed(by: disposeBag)
 
         searchButtonDidTapStream
-            .flatMapLatest { _ -> Observable<[Place]> in
+            .flatMapLatest { _ -> Observable<Places> in
                 return apiClient.fetchRestaurants(coordinate: coordinate)
             }
             .bind(to: placesStream)
@@ -100,7 +100,7 @@ extension PlacesViewModel {
 
 // MARK: Output
 extension PlacesViewModel {
-    var places: Observable<[Place]> {
+    var places: Observable<Places> {
         return placesStream.asObservable()
     }
 
