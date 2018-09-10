@@ -24,14 +24,12 @@ final class PlacesViewModel: Injectable {
     private let updateLocationStream = PublishSubject<Void>()
     private let searchButtonDidTapStream = PublishSubject<Void>()
     private let markerDidTapStream = PublishSubject<String>()
-    private let addFavoriteButtonDidTapStream = PublishSubject<String>()
     private let navigateToPlaceStream = PublishSubject<Void>()
 
     // MARK: BehaviorSubjects
     private let cameraStream = BehaviorSubject<GMSCameraPosition?>(value: nil)
     private let placesStream = BehaviorSubject<Places>(value: Places(results: [], status: "0", htmlAttributions: []))
     private let imageStream = BehaviorSubject<UIImage?>(value: nil)
-    private let resultOfAddFavoriteStream = BehaviorSubject<Bool>(value: true)
 
     // MARK: initial method
     init(with dependency: Dependency) {
@@ -68,14 +66,6 @@ final class PlacesViewModel: Injectable {
             }
             .bind(to: imageStream)
             .disposed(by: disposeBag)
-
-        addFavoriteButtonDidTapStream
-            .flatMapLatest { placeId -> Observable<Bool> in
-                // TODO: Realmに保存する処理を実装
-                return Observable.just(true)
-            }
-            .bind(to: resultOfAddFavoriteStream)
-            .disposed(by: disposeBag)
     }
 }
 
@@ -92,10 +82,6 @@ extension PlacesViewModel {
     var markerDidTap: AnyObserver<String> {
         return markerDidTapStream.asObserver()
     }
-
-    var addFavoriteButtonDidTap: AnyObserver<String> {
-        return addFavoriteButtonDidTapStream.asObserver()
-    }
 }
 
 // MARK: Output
@@ -110,10 +96,6 @@ extension PlacesViewModel {
 
     var image: Observable<UIImage?> {
         return imageStream.asObservable()
-    }
-
-    var resultOfAddFavorite: Observable<Bool> {
-        return resultOfAddFavoriteStream.asObservable()
     }
 
     var navigateToPlace: Observable<Void> {

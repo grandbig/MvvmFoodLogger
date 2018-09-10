@@ -6,14 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoContentView" customModule="MvvmFoodLogger" customModuleProvider="target">
             <connections>
-                <outlet property="addFavoriteButton" destination="TXr-TT-tkf" id="U35-as-lhd"/>
                 <outlet property="imageView" destination="rEd-nG-Vhl" id="eKJ-LL-brj"/>
                 <outlet property="nameLabel" destination="IXh-aA-Ls9" id="cvh-BE-mTN"/>
             </connections>
@@ -28,54 +26,39 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="xME-Hj-be4">
-                    <rect key="frame" x="16" y="20" width="218" height="188"/>
+                    <rect key="frame" x="16" y="18" width="218" height="229"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-ny-6to">
-                            <rect key="frame" x="0.0" y="0.0" width="218" height="36"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-aA-Ls9">
-                                    <rect key="frame" x="0.0" y="8" width="178" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXr-TT-tkf">
-                                    <rect key="frame" x="182" y="0.0" width="36" height="36"/>
-                                    <color key="backgroundColor" red="0.90980392160000001" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="TXr-TT-tkf" secondAttribute="height" multiplier="1:1" id="6FW-TD-Tb2"/>
-                                        <constraint firstAttribute="width" constant="36" id="P37-3u-xYR"/>
-                                    </constraints>
-                                    <state key="normal" image="Favorite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </button>
-                            </subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-aA-Ls9">
+                            <rect key="frame" x="0.0" y="0.0" width="218" height="17"/>
                             <constraints>
-                                <constraint firstItem="IXh-aA-Ls9" firstAttribute="width" secondItem="ihC-ny-6to" secondAttribute="width" constant="-40" id="7Fx-Pe-KmO"/>
+                                <constraint firstAttribute="height" constant="17" id="RbB-Yx-VPw"/>
                             </constraints>
-                        </stackView>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEd-nG-Vhl">
-                            <rect key="frame" x="45" y="60" width="128" height="128"/>
+                            <rect key="frame" x="45" y="41" width="128" height="128"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="rEd-nG-Vhl" secondAttribute="height" multiplier="1:1" id="UeV-i1-xDf"/>
+                                <constraint firstAttribute="height" constant="128" id="DBv-PI-Zp2"/>
                                 <constraint firstAttribute="width" constant="128" id="wJK-AB-aBc"/>
                             </constraints>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uc-lF-1QG">
+                            <rect key="frame" x="0.0" y="193" width="218" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="ihC-ny-6to" firstAttribute="width" secondItem="xME-Hj-be4" secondAttribute="width" id="4gl-ni-qRI"/>
+                        <constraint firstItem="IXh-aA-Ls9" firstAttribute="width" secondItem="xME-Hj-be4" secondAttribute="width" id="m9u-jw-ors"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xME-Hj-be4" secondAttribute="bottom" constant="16" id="25Z-dt-Z3z"/>
-                <constraint firstItem="xME-Hj-be4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="ALn-rH-1cz"/>
+                <constraint firstItem="xME-Hj-be4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="18" id="ALn-rH-1cz"/>
                 <constraint firstItem="7Ew-mG-0zu" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Frx-yO-1F5"/>
+                <constraint firstItem="7Ew-mG-0zu" firstAttribute="bottom" secondItem="xME-Hj-be4" secondAttribute="bottom" constant="18" id="MTN-Sq-Y3Y"/>
                 <constraint firstItem="7Ew-mG-0zu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ort-5d-dhQ"/>
                 <constraint firstItem="xME-Hj-be4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YCz-IX-09V"/>
                 <constraint firstItem="7Ew-mG-0zu" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="eU8-et-hfZ"/>
@@ -88,7 +71,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Favorite" width="18" height="18"/>
         <image name="InfoWindow" width="137" height="140"/>
     </resources>
 </document>

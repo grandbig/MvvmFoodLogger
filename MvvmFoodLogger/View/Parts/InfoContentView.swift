@@ -13,7 +13,6 @@ final class InfoContentView: UIView {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet weak var addFavoriteButton: UIButton!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

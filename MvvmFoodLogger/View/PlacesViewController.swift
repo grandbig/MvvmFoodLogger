@@ -77,17 +77,6 @@ class PlacesViewController: UIViewController, Injectable {
             .bind(to: viewModel.markerDidTap)
             .disposed(by: disposeBag)
 
-        displayedInfoWindow?.addFavoriteButton.rx.tap
-            .map { [weak self] _ in
-                guard let strongSelf = self else { return String() }
-                guard let marker = strongSelf.mapView.selectedMarker as? RestaurantMarker else {
-                    return String()
-                }
-                return marker.id
-            }
-            .bind(to: viewModel.addFavoriteButtonDidTap)
-            .disposed(by: disposeBag)
-
         viewModel.camera
             .bind { [weak self] camera in
                 guard let strongSelf = self, let camera = camera else { return }
