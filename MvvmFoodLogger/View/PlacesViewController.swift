@@ -90,11 +90,24 @@ class PlacesViewController: UIViewController, Injectable {
         viewModel.places
             .bind { [weak self] places in
                 guard let strongSelf = self else { return }
-                places.forEach({ (place) in
-                    strongSelf.putMarker(place: place)
-                })
+                let results = places.results
+                if results.count > 0 {
+                    results.forEach({ (place) in
+                        strongSelf.putMarker(place: place)
+                    })
+                    return
+                }
+                switch places.status {
+                case R.string.error.badRequestCode():
+                    // エラーでプレイス情報を取得できなかった場合
+                    strongSelf.showAlert(message: R.string.error.cannotFoundPlace(), completion: {})
+                default:
+                    break
+                }
+                
             }
             .disposed(by: disposeBag)
+
         viewModel.image
             .bind { [weak self] image in
                 guard let strongSelf = self else { return }
@@ -111,9 +124,8 @@ class PlacesViewController: UIViewController, Injectable {
         let marker = RestaurantMarker(position: coordinate)
         marker.id = place.placeId
         marker.name = place.name
-        marker.icon = UIImage(named: "Restaurant")
+        marker.icon = R.image.restaurant()
         marker.appearAnimation = GMSMarkerAnimation.pop
-        marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0.8)
         marker.map = mapView
         marker.tracksInfoWindowChanges = true
     }

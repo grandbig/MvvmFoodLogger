@@ -1,0 +1,6 @@
+// エラーメッセージ
+"cannotFoundPlace" = "プレイス情報を取得できませんでした。";
+
+// エラーコード
+"badRequestCode" = "400";
+"notFoundCode" = "404";

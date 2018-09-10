@@ -29,7 +29,7 @@ internal enum GooglePlacesError: Error {
 
 protocol GooglePlacesAPIClient {
 
-    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<[Place]>
+    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Places>
     func fetchPhoto(placeId: String) -> Observable<UIImage?>
 }
 
@@ -126,7 +126,7 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
     /// 指定の緯度、経度から一定範囲内のレストランを検索する処理
     ///
     /// - Returns: レストランのプレイス情報
-    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<[Place]> {
+    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Places> {
         
         return provider.rx
             .request(.restaurants(coordinate: coordinate))
@@ -138,11 +138,8 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
             })
             .catchError({ error -> PrimitiveSequence<SingleTrait, Places> in
                 // Decodeエラーが発生した場合は空配列で返却する
-                let places = Places(results: [], status: "0", htmlAttributions: [])
+                let places = Places(results: [], status: R.string.error.badRequestCode(), htmlAttributions: [])
                 return PrimitiveSequence.just(places)
-            })
-            .map({ places -> [Place] in
-                return places.results
             })
             .asObservable()
     }

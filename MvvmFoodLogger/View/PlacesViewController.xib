@@ -51,14 +51,14 @@
                     </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99607843137254903" green="0.95294117647058818" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SF1-ng-Pod" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6Md-6t-JVd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JGW-Yt-RK4" secondAttribute="trailing" constant="12" id="Cnp-QD-5cn"/>
                 <constraint firstItem="SF1-ng-Pod" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E3w-Ys-u0N"/>
                 <constraint firstItem="SF1-ng-Pod" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XNh-FQ-u03"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JGW-Yt-RK4" secondAttribute="bottom" constant="72" id="bO3-JL-nwO"/>
-                <constraint firstItem="SF1-ng-Pod" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="sa0-OD-Es2"/>
+                <constraint firstItem="SF1-ng-Pod" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="sa0-OD-Es2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
