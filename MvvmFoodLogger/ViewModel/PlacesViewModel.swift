@@ -15,7 +15,7 @@ final class PlacesViewModel: Injectable {
 
     struct Dependency {
         let apiClient: GooglePlacesAPIClient
-        let locationManager: LocationManager
+        let locationManager: LocationManagerClient
         let coordinate: CLLocationCoordinate2D
     }
     private let disposeBag = DisposeBag()

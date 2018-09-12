@@ -8,31 +8,31 @@
 
 import Foundation
 
-public struct Location: Codable {
+public struct Location: Codable, Equatable {
     
     public var lat: Double
     public var lng: Double
 }
 
-public struct Viewport: Codable {
+public struct Viewport: Codable, Equatable {
     
     public var northeast: Location
     public var southwest: Location
 }
 
-public struct Geometry: Codable {
+public struct Geometry: Codable, Equatable {
     
     public var viewport: Viewport
     public var location: Location
 }
 
-public struct OpeningHours: Codable {
+public struct OpeningHours: Codable, Equatable {
     
     public var weekdayText: [String]?
     public var openNow: Bool
 }
 
-public struct Photos: Codable {
+public struct Photos: Codable, Equatable {
     
     public var photoReference: String
     public var width: Double
@@ -40,8 +40,23 @@ public struct Photos: Codable {
     public var htmlAttributions: [String]
 }
 
-public struct Place: Codable {
-    
+public struct Place: Codable, Equatable {
+    public static func == (lhs: Place, rhs: Place) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.placeId == rhs.placeId
+            && lhs.name == rhs.name
+            && lhs.icon == rhs.icon
+            && lhs.rating == rhs.rating
+            && lhs.scope == rhs.scope
+            && lhs.vicinity == rhs.vicinity
+            && lhs.reference == rhs.reference
+            && lhs.priceLevel == rhs.priceLevel
+            && lhs.types == rhs.types
+            && lhs.geometry == rhs.geometry
+            && lhs.openingHours == rhs.openingHours
+            && lhs.photos == rhs.photos
+    }
+
     public var id: String
     public var placeId: String
     public var name: String
