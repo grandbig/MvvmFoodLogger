@@ -19,6 +19,7 @@ final class PlacesViewModel: Injectable {
         let coordinate: CLLocationCoordinate2D
     }
     private let disposeBag = DisposeBag()
+    private static let defaultPlaces = Places(results: [], status: R.string.common.ok(), htmlAttributions: [])
 
     // MARK: PublishSubjects
     private let updateLocationStream = PublishSubject<Void>()
@@ -28,7 +29,8 @@ final class PlacesViewModel: Injectable {
 
     // MARK: BehaviorSubjects
     private let cameraStream = BehaviorSubject<GMSCameraPosition?>(value: nil)
-    private let placesStream = BehaviorSubject<Places>(value: Places(results: [], status: "0", htmlAttributions: []))
+    private let placesStream = BehaviorSubject<Places>(value: defaultPlaces)
+    private let errorStream = BehaviorSubject<String>(value: String())
     private let imageStream = BehaviorSubject<UIImage?>(value: nil)
 
     // MARK: initial method
@@ -37,6 +39,7 @@ final class PlacesViewModel: Injectable {
         let locationManager = dependency.locationManager
         var coordinate = dependency.coordinate
 
+        // 位置情報の定期更新
         updateLocationStream
             .flatMapLatest { _ -> Observable<CLLocationCoordinate2D?> in
                 return locationManager.fetchCurrentLocation()
@@ -53,13 +56,35 @@ final class PlacesViewModel: Injectable {
             .bind(to: cameraStream)
             .disposed(by: disposeBag)
 
-        searchButtonDidTapStream
-            .flatMapLatest { _ -> Observable<Places> in
+        // 検索ボタンタップ時
+        let state = searchButtonDidTapStream
+            .flatMapLatest { _ -> Observable<Result<Places>> in
                 return apiClient.fetchRestaurants(coordinate: coordinate)
+            }
+        state
+            .flatMapLatest { result -> Observable<Places> in
+                switch result {
+                case let .success(value):
+                    return Observable.just(value)
+                case .failure:
+                    return Observable.just(PlacesViewModel.defaultPlaces)
+                }
             }
             .bind(to: placesStream)
             .disposed(by: disposeBag)
+        state
+            .flatMapLatest { result -> Observable<String> in
+                switch result {
+                case let .failure(error):
+                    return Observable.just(error.localizedDescription)
+                default:
+                    return Observable.just(String())
+                }
+            }
+            .bind(to: errorStream)
+            .disposed(by: disposeBag)
 
+        // マーカタップ時
         markerDidTapStream
             .flatMapLatest { placeId -> Observable<UIImage?> in
                 return apiClient.fetchPhoto(placeId: placeId)
@@ -88,6 +113,10 @@ extension PlacesViewModel {
 extension PlacesViewModel {
     var places: Observable<Places> {
         return placesStream.asObservable()
+    }
+
+    var error: Observable<String> {
+        return errorStream.asObservable()
     }
 
     var camera: Observable<GMSCameraPosition?> {

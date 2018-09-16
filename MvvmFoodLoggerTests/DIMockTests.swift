@@ -54,7 +54,7 @@ class ViewController: UIViewController, Injectable {
     }
 }
 
-class MvvmFoodLoggerTests: XCTestCase {
+class DIMockTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

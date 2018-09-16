@@ -13,11 +13,13 @@
 		2E1650BF2142AD430069BE62 /* InfoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1650BE2142AD430069BE62 /* InfoContentView.swift */; };
 		2E1650C221456E800069BE62 /* ViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1650C121456E800069BE62 /* ViewController+Alert.swift */; };
 		2E1650C621456FA70069BE62 /* Error.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E1650C521456FA70069BE62 /* Error.strings */; };
+		2E23ED9D214E3607004E739C /* PlacesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23ED9C214E3606004E739C /* PlacesViewModelTests.swift */; };
+		2E23EDA0214E9866004E739C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23ED9F214E9866004E739C /* Result.swift */; };
 		2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */; };
 		2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2D2132511100D20283 /* AppDelegate.swift */; };
 		2EF43C352132511300D20283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C342132511300D20283 /* Assets.xcassets */; };
 		2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C362132511300D20283 /* LaunchScreen.storyboard */; };
-		2EF43C432132511400D20283 /* MvvmFoodLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C422132511400D20283 /* MvvmFoodLoggerTests.swift */; };
+		2EF43C432132511400D20283 /* DIMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C422132511400D20283 /* DIMockTests.swift */; };
 		2EF43C4E2132511400D20283 /* MvvmFoodLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C4D2132511400D20283 /* MvvmFoodLoggerUITests.swift */; };
 		2EF43C5D213254CA00D20283 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5C213254C900D20283 /* RxSwift.framework */; };
 		2EF43C67213254EE00D20283 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF43C5E213254ED00D20283 /* ReactiveMoya.framework */; };
@@ -71,13 +73,15 @@
 		2E1650BE2142AD430069BE62 /* InfoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoContentView.swift; sourceTree = "<group>"; };
 		2E1650C121456E800069BE62 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 		2E1650C521456FA70069BE62 /* Error.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Error.strings; sourceTree = "<group>"; };
+		2E23ED9C214E3606004E739C /* PlacesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModelTests.swift; sourceTree = "<group>"; };
+		2E23ED9F214E9866004E739C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2EF43C2A2132511100D20283 /* MvvmFoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmFoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C2D2132511100D20283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF43C342132511300D20283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EF43C372132511300D20283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EF43C392132511300D20283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF43C3E2132511400D20283 /* MvvmFoodLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmFoodLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EF43C422132511400D20283 /* MvvmFoodLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmFoodLoggerTests.swift; sourceTree = "<group>"; };
+		2EF43C422132511400D20283 /* DIMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIMockTests.swift; sourceTree = "<group>"; };
 		2EF43C442132511400D20283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF43C492132511400D20283 /* MvvmFoodLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmFoodLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C4D2132511400D20283 /* MvvmFoodLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmFoodLoggerUITests.swift; sourceTree = "<group>"; };
@@ -217,8 +221,9 @@
 		2EF43C412132511400D20283 /* MvvmFoodLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2EF43C422132511400D20283 /* MvvmFoodLoggerTests.swift */,
+				2EF43C422132511400D20283 /* DIMockTests.swift */,
 				2EF43C442132511400D20283 /* Info.plist */,
+				2E23ED9C214E3606004E739C /* PlacesViewModelTests.swift */,
 			);
 			path = MvvmFoodLoggerTests;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				2EF43C8A2132657E00D20283 /* GooglePlacesAPI.swift */,
 				2EF43C9E213A68AB00D20283 /* LocationManager.swift */,
 				2E1650B4213ED9740069BE62 /* RestaurantMarker.swift */,
+				2E23ED9F214E9866004E739C /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -705,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EF43C8721325CE400D20283 /* PlacesViewModel.swift in Sources */,
+				2E23EDA0214E9866004E739C /* Result.swift in Sources */,
 				2E1650BF2142AD430069BE62 /* InfoContentView.swift in Sources */,
 				2EF43C8521325CA700D20283 /* Places.swift in Sources */,
 				2E1650C221456E800069BE62 /* ViewController+Alert.swift in Sources */,
@@ -723,7 +730,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EF43C432132511400D20283 /* MvvmFoodLoggerTests.swift in Sources */,
+				2E23ED9D214E3607004E739C /* PlacesViewModelTests.swift in Sources */,
+				2EF43C432132511400D20283 /* DIMockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,7 +29,7 @@ internal enum GooglePlacesError: Error {
 
 protocol GooglePlacesAPIClient {
 
-    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Places>
+    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Result<Places>>
     func fetchPhoto(placeId: String) -> Observable<UIImage?>
 }
 
@@ -126,24 +126,23 @@ class GooglePlacesAPI: GooglePlacesAPIClient {
     /// 指定の緯度、経度から一定範囲内のレストランを検索する処理
     ///
     /// - Returns: レストランのプレイス情報
-    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Places> {
-        
+    func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Result<Places>> {
         return provider.rx
             .request(.restaurants(coordinate: coordinate))
             .filterSuccessfulStatusCodes()
-            .map({ response -> Places in
+            .map({ response -> Result<Places> in
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                return try decoder.decode(Places.self, from: response.data)
+                let places = try decoder.decode(Places.self, from: response.data)
+                return Result.success(places)
             })
-            .catchError({ error -> PrimitiveSequence<SingleTrait, Places> in
-                // Decodeエラーが発生した場合は空配列で返却する
-                let places = Places(results: [], status: R.string.error.badRequestCode(), htmlAttributions: [])
-                return PrimitiveSequence.just(places)
+            .catchError({ error -> PrimitiveSequence<SingleTrait, Result<Places>> in
+                let result = Result<Places>.failure(error: APIError.apiError(description: error.localizedDescription))
+                return PrimitiveSequence.just(result)
             })
             .asObservable()
     }
-    
+
     func fetchPhoto(placeId: String) -> Observable<UIImage?> {
         
         return Observable.create({ (observer) -> Disposable in
