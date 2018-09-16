@@ -92,19 +92,11 @@ class PlacesViewController: UIViewController, Injectable {
                 guard let strongSelf = self else { return }
                 let results = places.results
                 if results.count > 0 {
+                    strongSelf.mapView.clear()
                     results.forEach({ (place) in
                         strongSelf.putMarker(place: place)
                     })
-                    return
                 }
-                switch places.status {
-                case R.string.error.badRequestCode():
-                    // エラーでプレイス情報を取得できなかった場合
-                    strongSelf.showAlert(message: R.string.error.cannotFoundPlace(), completion: {})
-                default:
-                    break
-                }
-                
             }
             .disposed(by: disposeBag)
 
@@ -112,6 +104,14 @@ class PlacesViewController: UIViewController, Injectable {
             .bind { [weak self] image in
                 guard let strongSelf = self else { return }
                 strongSelf.displayedInfoWindow?.configureImage(image)
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.error
+            .bind { [weak self] message in
+                guard let strongSelf = self else { return }
+                if message.count == 0 { return }
+                strongSelf.showAlert(message: message, completion: {})
             }
             .disposed(by: disposeBag)
     }

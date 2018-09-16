@@ -18,7 +18,7 @@ class PlacesViewModelTests: XCTestCase {
     /// テスト用のモックGooglePlacesAPIClient
     final class MockGooglePlacesAPIClient: GooglePlacesAPIClient {
 
-        func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Places> {
+        func fetchRestaurants(coordinate: CLLocationCoordinate2D) -> Observable<Result<Places>> {
             return Observable.just(mockPlacesItem())
         }
         
@@ -35,14 +35,15 @@ class PlacesViewModelTests: XCTestCase {
     }
 
     /// テスト用のモックPlacesデータ
-    static let mockPlacesItem = { () -> Places in
+    static let mockPlacesItem = { () -> Result<Places> in
         let location = Location(lat: 35.0, lng: 137.0)
         let viewport = Viewport(northeast: location, southwest: location)
         let geometry = Geometry(viewport: viewport, location: location)
         let place = Place(id: "", placeId: "", name: "", icon: "", rating: nil, scope: "", vicinity: "", reference: "",
                           priceLevel: nil, types: [], geometry: geometry, openingHours: nil, photos: nil)
         let places = Places(results: [place], status: R.string.common.ok(), htmlAttributions: [])
-        return places
+        let result = Result.success(places)
+        return result
     }
 
     /// テスト用のモック位置情報データ
