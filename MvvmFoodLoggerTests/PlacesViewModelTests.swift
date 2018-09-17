@@ -95,5 +95,22 @@ class PlacesViewModelTests: XCTestCase {
                            expectedItems[key].value.element.unsafelyUnwrapped?.target.longitude)
         }
     }
-    
+
+    func testSearch() {
+        let disposeBag = DisposeBag()
+        let places = scheduler.createObserver(Places.self)
+        viewModel.places
+            .bind(to: places)
+            .disposed(by: disposeBag)
+
+        scheduler.scheduleAt(5) { [unowned self] in
+            self.viewModel.searchButtonDidTap.onNext(())
+        }
+
+        scheduler.start()
+        let expectedItems = next(5, PlacesViewModelTests.mockPlacesItem())
+        if case let .success(value)? = expectedItems.value.element {
+            XCTAssertEqual(places.events[1].value.element?.results, value.results)
+        }
+    }
 }
