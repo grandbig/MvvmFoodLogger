@@ -20,8 +20,8 @@ extension UIViewController {
     internal func showAlert(title: String = R.string.common.confirm(),
                             message: String,
                             completion: @escaping (() -> Void)) {
-        let alert = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction.init(title: R.string.common.ok(), style: UIAlertActionStyle.default) { _ in
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction.init(title: R.string.common.ok(), style: UIAlertAction.Style.default) { _ in
             completion()
         }
         alert.addAction(okAction)
@@ -40,11 +40,11 @@ extension UIViewController {
                               message: String,
                               okCompletion: @escaping (() -> Void),
                               cancelCompletion: @escaping (() -> Void)) {
-        let alert = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction.init(title: R.string.common.ok(), style: UIAlertActionStyle.default) { _ in
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction.init(title: R.string.common.ok(), style: UIAlertAction.Style.default) { _ in
             okCompletion()
         }
-        let cancelAction = UIAlertAction.init(title: R.string.common.cancel(), style: UIAlertActionStyle.cancel) { _ in
+        let cancelAction = UIAlertAction.init(title: R.string.common.cancel(), style: UIAlertAction.Style.cancel) { _ in
             cancelCompletion()
         }
         alert.addAction(okAction)
@@ -68,14 +68,14 @@ extension UIViewController {
         secondCompletion: @escaping (() -> Void)) {
         let alert = UIAlertController.init(title: R.string.common.confirm(),
                                            message: message,
-                                           preferredStyle: UIAlertControllerStyle.actionSheet)
-        let firstAction = UIAlertAction.init(title: firstActionTitle, style: UIAlertActionStyle.default) { _ in
+                                           preferredStyle: UIAlertController.Style.actionSheet)
+        let firstAction = UIAlertAction.init(title: firstActionTitle, style: UIAlertAction.Style.default) { _ in
             firstCompletion()
         }
-        let secondAction = UIAlertAction.init(title: secondActionTitle, style: UIAlertActionStyle.default) { _ in
+        let secondAction = UIAlertAction.init(title: secondActionTitle, style: UIAlertAction.Style.default) { _ in
             secondCompletion()
         }
-        let cancelAction = UIAlertAction.init(title: R.string.common.cancel(), style: UIAlertActionStyle.cancel) { _ in
+        let cancelAction = UIAlertAction.init(title: R.string.common.cancel(), style: UIAlertAction.Style.cancel) { _ in
         }
         alert.addAction(firstAction)
         alert.addAction(secondAction)
