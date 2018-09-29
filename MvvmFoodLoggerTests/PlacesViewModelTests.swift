@@ -113,4 +113,20 @@ class PlacesViewModelTests: XCTestCase {
             XCTAssertEqual(places.events[1].value.element?.results, value.results)
         }
     }
+
+    func testTapMarker() {
+        let disposeBag = DisposeBag()
+        let photos = scheduler.createObserver(UIImage?.self)
+        viewModel.image
+            .bind(to: photos)
+            .disposed(by: disposeBag)
+
+        scheduler.scheduleAt(5) { [unowned self] in
+            self.viewModel.markerDidTap.onNext("")
+        }
+
+        scheduler.start()
+        let expectedItems = next(5, R.image.noImage())
+        XCTAssertEqual(photos.events[1].value.element, expectedItems.value.element)
+    }
 }

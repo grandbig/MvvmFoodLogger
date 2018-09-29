@@ -16,6 +16,7 @@
 		2E23ED9D214E3607004E739C /* PlacesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23ED9C214E3606004E739C /* PlacesViewModelTests.swift */; };
 		2E23EDA0214E9866004E739C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23ED9F214E9866004E739C /* Result.swift */; };
 		2E7332C1E13B035B79231588 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBA64C4AFF6034CF8606E89 /* Pods_MvvmFoodLogger_Tests_MvvmFoodLoggerTests.framework */; };
+		2E7CCFF1215FC08E000B50E9 /* PlacesViewModelErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CCFF0215FC08E000B50E9 /* PlacesViewModelErrorTests.swift */; };
 		2EF43C2E2132511100D20283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF43C2D2132511100D20283 /* AppDelegate.swift */; };
 		2EF43C352132511300D20283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C342132511300D20283 /* Assets.xcassets */; };
 		2EF43C382132511300D20283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF43C362132511300D20283 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		2E1650C521456FA70069BE62 /* Error.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Error.strings; sourceTree = "<group>"; };
 		2E23ED9C214E3606004E739C /* PlacesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModelTests.swift; sourceTree = "<group>"; };
 		2E23ED9F214E9866004E739C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2E7CCFF0215FC08E000B50E9 /* PlacesViewModelErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModelErrorTests.swift; sourceTree = "<group>"; };
 		2EF43C2A2132511100D20283 /* MvvmFoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmFoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF43C2D2132511100D20283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF43C342132511300D20283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				2EF43C422132511400D20283 /* DIMockTests.swift */,
 				2EF43C442132511400D20283 /* Info.plist */,
 				2E23ED9C214E3606004E739C /* PlacesViewModelTests.swift */,
+				2E7CCFF0215FC08E000B50E9 /* PlacesViewModelErrorTests.swift */,
 			);
 			path = MvvmFoodLoggerTests;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 			files = (
 				2E23ED9D214E3607004E739C /* PlacesViewModelTests.swift in Sources */,
 				2EF43C432132511400D20283 /* DIMockTests.swift in Sources */,
+				2E7CCFF1215FC08E000B50E9 /* PlacesViewModelErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
